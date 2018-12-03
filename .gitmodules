@@ -1,0 +1,3 @@
+[submodule "obs_lsst"]
+	path = obs_lsst
+	url = https://github.com/lsst/obs_lsst.git

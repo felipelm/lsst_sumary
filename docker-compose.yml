@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  lsst:
+    image: lsstsqre/centos:7-stack-lsst_distrib-w_2018_45
+    environment:
+      - OMP_NUM_THREADS=1
+    command: sh /data/entry.sh
+    volumes:
+      - .:/data
