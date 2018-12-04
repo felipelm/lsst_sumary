@@ -12,6 +12,7 @@ docker-compose up
 ```
 source /opt/lsst/software/stack/loadLSST.bash
 setup lsst_distrib
+cd /data/obs_lsst
 setup -r .
 scons -Q -j 6 opt=3
 cd ../data_repo/
@@ -28,4 +29,10 @@ e.g makeFpSummary.py . --output output4 --id visit=193824 -c binSize=4 contrast=
 
 ```
 vips im_vips2tiff calexp-v00193824.fits teste.tif:deflate,tile:256x256,pyramid
+```
+
+or 
+
+```
+stiff -BITS_PER_CHANNEL -32 -COPY_HEADER Y teste.fits -OUTFILE_NAME teste.ptif
 ```
